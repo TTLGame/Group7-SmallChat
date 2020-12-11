@@ -2,7 +2,7 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
-import { Octicons,Fontisto} from '@expo/vector-icons';
+import { Octicons,Fontisto,AntDesign} from '@expo/vector-icons';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import MainTabNavigator from './MainTabNavigator';
@@ -47,12 +47,13 @@ function RootNavigator() {
                     title:"SmallTalk",
                     headerRight: ()=> (
                         <View style={{
+                            
                             flexDirection:"row",
                             width:60,
                             justifyContent:'space-between',
                             marginRight:10}}>
-                            <Octicons name="search" size={21} color={'white'} />
-                            <Fontisto name="nav-icon-a" size={21} color="white" />
+                            <Octicons name="search" size={21}  color={'white'} />
+                            <Fontisto name="nav-icon-a" size={21} color={'white'} />
                         </View>
                     )
                 }} />
