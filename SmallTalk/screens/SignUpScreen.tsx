@@ -1,14 +1,50 @@
 import React from 'react';
-
-import {Text, View, StyleSheet, TextInput,TouchableOpacity} from 'react-native'
-
+import {AntDesign} from '@expo/vector-icons'
+import {Text, View, StyleSheet, TextInput,TouchableOpacity, Platform, ImagePropTypes} from 'react-native'
+import * as imagePicker from 'expo-image-picker'
+import * as Permissions from 'expo-permissions'
 export default function SignUpScreen() {
+    const getPermission = async ()=>{
+        if (Platform.OS !== "web"){
+            const {status} = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+            return status;
+        }
+    }
+    const pickImage = async () =>{
+        try {
+            let result = await imagePicker.launchImageLibraryAsync({
+                mediaTypes: imagePicker.MediaTypeOptions.Images,
+                allowsEditing: true,
+                aspect: [1,1],
+                quality: 0.5,
+            })
+            if (!result.cancelled){
+                // set img
+            }
+        }
+        
+        catch(error){
+            console.log("Error")
+        }
+    }
+    const addProfilePicture = async() =>{
+        const status = await getPermission();
+        if (status !=='granted'){
+            alert("We need persission to access your camera")
+            return 
+        }
+        pickImage()
+        
+    }
     return (
         <View style ={{alignItems:'center',height:'100%',width:'100%',justifyContent:'center'}}>
         <View style = {styles.Leftcircle} ></View>
         <View style = {styles.Rightcircle} ></View>
         <View style={{width:'100%' ,marginTop:200}}>
             <Text style={{fontSize: 36,alignSelf: 'center'}}>Sign Up</Text>
+            <TouchableOpacity style ={styles.ProfileContainer} onPress ={addProfilePicture} >
+                <AntDesign style ={{alignSelf:'center'}}name="plus" size ={24} color ="#ffffff"></AntDesign>
+            </TouchableOpacity>
             <TextInput
                 style={styles.inputField}
                 //onChangeText={text => onChangeText(text)}
@@ -73,5 +109,15 @@ const styles =StyleSheet.create({
           marginTop:30,
           alignSelf: 'center',
           
-    }
+    },
+    ProfileContainer:{
+        backgroundColor: "#e1e2e6",
+        width: 80,
+        height: 80,
+        borderRadius:40,
+        alignSelf:'center',
+        overflow:'hidden',
+        justifyContent:'center',
+        marginTop:16,
+    },
 })

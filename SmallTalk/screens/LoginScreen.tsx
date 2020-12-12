@@ -1,8 +1,13 @@
 import React from 'react';
 
 import {Text, View, StyleSheet, TextInput,TouchableOpacity} from 'react-native'
+import {useNavigation} from'@react-navigation/native'
 
 export default function LoginScreen() {
+    const navigation = useNavigation()
+    const onClick = ()=>{
+        navigation.navigate('Root');
+    }
     return (
         <View style ={{alignItems:'center',height:'100%',width:'100%',justifyContent:'center'}}>
         <View style = {styles.Leftcircle} ></View>
@@ -27,7 +32,8 @@ export default function LoginScreen() {
                 width:'80%',
                 marginTop: 60,
                 borderRadius: 20,
-            }}>
+                
+            }} onPress ={onClick}>
             <Text style ={{alignSelf: 'center',fontSize:20}}>Sign In</Text>
             </TouchableOpacity>
             <Text style ={{alignSelf: 'center',fontSize:10, marginTop: 20}}>New to SmallChat?

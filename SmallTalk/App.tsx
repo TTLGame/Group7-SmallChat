@@ -17,10 +17,9 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-        {/* <Navigation colorScheme={colorScheme} />
-        <StatusBar /> */}
-        {/* <LoginScreen/> */}
-        <SignUpScreen/>
+        <Navigation colorScheme={colorScheme} />
+        <StatusBar />
+     
       </SafeAreaProvider>
     );
   }
