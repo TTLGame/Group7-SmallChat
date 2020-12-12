@@ -47,14 +47,6 @@ export default function MainTabNavigator() {
         }}
       />
         <MainTab.Screen
-            name="Group"
-            component={TabTwoNavigator}
-            options={{
-                tabBarIcon: ({ color }) => <FontAwesome name="group" color={color} size={20}  />,
-                tabBarLabel: () => null
-            }}
-        />
-        <MainTab.Screen
             name="Account"
             component={TabTwoNavigator}
             options={{
