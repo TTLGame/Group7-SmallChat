@@ -37,7 +37,7 @@ export default function LoginScreen() {
             <Text style ={{alignSelf: 'center',fontSize:20}}>Sign In</Text>
             </TouchableOpacity>
             <Text style ={{alignSelf: 'center',fontSize:10, marginTop: 20}}>New to SmallChat?
-            <Text style ={{color:'#8022d9'}}> Sign Up</Text>
+            <Text onPress={()=>navigation.navigate('SignUp')} style ={{color:'#8022d9'}}> Sign Up</Text>
             </Text>
 
                 
