@@ -7,6 +7,7 @@ import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 
 import LoginScreen from './screens/LoginScreen'
+import SignUpScreen from './screens/SignUpScreen';
 export default function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
@@ -16,9 +17,10 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-        <Navigation colorScheme={colorScheme} />
-        <StatusBar />
-        {/*<LoginScreen/>*/}
+        {/* <Navigation colorScheme={colorScheme} />
+        <StatusBar /> */}
+        {/* <LoginScreen/> */}
+        <SignUpScreen/>
       </SafeAreaProvider>
     );
   }

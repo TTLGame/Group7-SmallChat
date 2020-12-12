@@ -2,13 +2,13 @@ import React from 'react';
 
 import {Text, View, StyleSheet, TextInput,TouchableOpacity} from 'react-native'
 
-export default function LoginScreen() {
+export default function SignUpScreen() {
     return (
         <View style ={{alignItems:'center',height:'100%',width:'100%',justifyContent:'center'}}>
         <View style = {styles.Leftcircle} ></View>
         <View style = {styles.Rightcircle} ></View>
         <View style={{width:'100%' ,marginTop:200}}>
-            <Text style={{fontSize: 36,alignSelf: 'center'}}>LOGIN</Text>
+            <Text style={{fontSize: 36,alignSelf: 'center'}}>Sign Up</Text>
             <TextInput
                 style={styles.inputField}
                 //onChangeText={text => onChangeText(text)}
@@ -28,10 +28,10 @@ export default function LoginScreen() {
                 marginTop: 60,
                 borderRadius: 20,
             }}>
-            <Text style ={{alignSelf: 'center',fontSize:20}}>Sign In</Text>
+            <Text style ={{alignSelf: 'center',fontSize:20}}>Sign Up</Text>
             </TouchableOpacity>
-            <Text style ={{alignSelf: 'center',fontSize:10, marginTop: 20}}>New to SmallChat?
-            <Text style ={{color:'#8022d9'}}> Sign Up</Text>
+            <Text style ={{alignSelf: 'center',fontSize:10, marginTop: 20}}>Already have an account?
+            <Text style ={{color:'#8022d9'}}> Sign In</Text>
             </Text>
 
                 
