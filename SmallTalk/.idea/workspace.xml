@@ -20,9 +20,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="D:\Group7-SmallChat\SmallTalk\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\NewApp\SmallTalk\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\NewApp\SmallTalk\components" />
+      <recent name="D:\NewApp\SmallTalk\screens" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -38,6 +45,7 @@
       <workItem from="1607721162575" duration="109000" />
       <workItem from="1607722352460" duration="15045000" />
       <workItem from="1607739687724" duration="14000" />
+      <workItem from="1607828724222" duration="11287000" />
     </task>
     <servers />
   </component>

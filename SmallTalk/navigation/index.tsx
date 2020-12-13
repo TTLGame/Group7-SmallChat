@@ -17,6 +17,7 @@ import {
 
 import NotFoundScreen from "../screens/NotFoundScreen";
 import ChatRoomScreen from "../screens/ChatRoomScreen";
+import ContactsScreen from "../screens/ContactsScreen";
 
 import { RootStackParamList } from "../types";
 import MainTabNavigator from "./MainTabNavigator";
@@ -25,7 +26,7 @@ import { View } from "../components/Themed";
 import Colors from "../constants/Colors";
 import styles from "../components/ChatListItem/style";
 import LoginScreen from "../screens/LoginScreen";
-
+import SignUpScreen from "../screens/SignUpScreen"
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({
@@ -88,9 +89,11 @@ function RootNavigator() {
           }}
         />
         <Stack.Screen
+        
           name="ChatRoom"
           component={ChatRoomScreen}
           options={({ route }) => ({
+              title:route.params.name,
             /*headerTitleStyle:{
                         backgroundColor:'transparent',
                         flexDirection:"row",
@@ -116,12 +119,15 @@ function RootNavigator() {
             ),
           })}
         />
-        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="SignUp" component={SignUpScreen}      options={{ headerShown: false }}
+/>
+
         <Stack.Screen
-          name="NotFound"
-          component={NotFoundScreen}
-          options={{ title: "Oops!" }}
+          name="Contacts"
+          component={ContactsScreen}
         />
+
       </Stack.Navigator>
    
 
