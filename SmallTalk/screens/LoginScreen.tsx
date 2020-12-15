@@ -9,7 +9,7 @@ export default function LoginScreen() {
         navigation.navigate('Root');
     }
     return (
-        <View style ={{alignItems:'center',height:'100%',width:'100%',justifyContent:'center'}}>
+        <View style ={{alignItems:'center',height:'100%',width:'100%',justifyContent:'center',backgroundColor:'white'}}>
         <View style = {styles.Leftcircle} ></View>
         <View style = {styles.Rightcircle} ></View>
         <View style={{width:'100%' ,marginTop:200}}>

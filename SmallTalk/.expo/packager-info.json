@@ -1,16 +1,9 @@
 {
-  "devToolsPort": 19002,
-<<<<<<< HEAD
-  "expoServerPort": 19000,
-  "packagerPort": 19000,
-  "webpackServerPort": 19006,
-=======
-  "expoServerPort": null,
-  "packagerPort": null,
-  "webpackServerPort": null,
->>>>>>> 12005c97ca8e6050182aea8729f2a764ebffa3b0
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "devToolsPort": 19003,
+  "expoServerPort": 19001,
+  "packagerPort": 19001,
+  "expoServerNgrokUrl": "https://fu-ub9.anonymous.smalltalk.exp.direct",
+  "packagerNgrokUrl": "https://packager.fu-ub9.anonymous.smalltalk.exp.direct",
+  "ngrokPid": 8520,
+  "webpackServerPort": 19006
 }

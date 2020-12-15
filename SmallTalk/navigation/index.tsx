@@ -122,7 +122,6 @@ function RootNavigator() {
         <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="SignUp" component={SignUpScreen}      options={{ headerShown: false }}
 />
-
         <Stack.Screen
           name="Contacts"
           component={ContactsScreen}
