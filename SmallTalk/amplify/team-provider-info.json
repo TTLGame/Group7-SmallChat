@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-smalltalk-dev-184853-authRole",
+      "UnauthRoleArn": "arn:aws:iam::939673415899:role/amplify-smalltalk-dev-184853-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::939673415899:role/amplify-smalltalk-dev-184853-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-smalltalk-dev-184853-deployment",
+      "UnauthRoleName": "amplify-smalltalk-dev-184853-unauthRole",
+      "StackName": "amplify-smalltalk-dev-184853",
+      "StackId": "arn:aws:cloudformation:us-east-1:939673415899:stack/amplify-smalltalk-dev-184853/d72a05d0-4514-11eb-9d07-0aedc5aecc23",
+      "AmplifyAppId": "dk4gw4zkrqeae"
+    },
+    "categories": {
+      "auth": {
+        "smalltalk100ba85c": {}
+      }
+    }
+  }
+}

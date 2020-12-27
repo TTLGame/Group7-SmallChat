@@ -52,7 +52,7 @@ function RootNavigator() {
   return (
     
       <Stack.Navigator
-        initialRouteName="Login"
+        initialRouteName="Root"
         screenOptions={{
           headerStyle: {
             backgroundColor: Colors.light.tint,
@@ -119,9 +119,8 @@ function RootNavigator() {
             ),
           })}
         />
-        <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }}/>
-        <Stack.Screen name="SignUp" component={SignUpScreen}      options={{ headerShown: false }}
-/>
+        {/*<Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }}/>*/}
+        {/*<Stack.Screen name="SignUp" component={SignUpScreen}      options={{ headerShown: false }}/>*/}
         <Stack.Screen
           name="Contacts"
           component={ContactsScreen}
