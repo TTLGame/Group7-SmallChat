@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65e176c4-725f-4f2f-bc6c-9497e3da87ff" name="Default Changelist" comment="" />
+    <list default="true" id="65e176c4-725f-4f2f-bc6c-9497e3da87ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContactListItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContactListItem/index.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +61,7 @@
       <workItem from="1608836673990" duration="108000" />
       <workItem from="1608837138533" duration="965000" />
       <workItem from="1609092600605" duration="13084000" />
+      <workItem from="1609251845059" duration="91000" />
     </task>
     <servers />
   </component>
