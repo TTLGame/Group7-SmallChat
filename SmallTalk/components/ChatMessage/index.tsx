@@ -1,25 +1,28 @@
-import React from 'react'
-import {Message} from "../../types";
-import {Text,View} from "react-native";
+import React from 'react';
+import {Text, View} from 'react-native';
+import { Message } from "../../types";
 import moment from "moment";
-import styles from "./style"
+import styles from './style'
 
 export type ChatMessageProps = {
     message: Message;
+    myId: String,
 }
 
-const ChatMessage= (props:ChatMessageProps) =>{
-    const {message} = props;
-    const isMyMessage=()=>{
-        return message.user.id === 'u1';
+const ChatMessage = (props: ChatMessageProps) => {
+    const { message, myId } = props;
+
+    const isMyMessage = () => {
+        return message.user.id === myId;
     }
+
     return (
         <View style={styles.container}>
             <View style={[
-                styles.messageBox,
-                {backgroundColor: isMyMessage() ? '#DCF8C5' : 'white',
-                    marginLeft: isMyMessage() ? 50:0,
-                    marginRight: isMyMessage() ? 0:50,
+                styles.messageBox, {
+                    backgroundColor: isMyMessage() ? '#DCF8C5' : 'white',
+                    marginLeft: isMyMessage() ? 50 : 0,
+                    marginRight: isMyMessage() ? 0 : 50,
                 }
             ]}>
                 {!isMyMessage() && <Text style={styles.name}>{message.user.name}</Text>}
