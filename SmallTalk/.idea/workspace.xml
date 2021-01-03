@@ -4,16 +4,9 @@
     <list default="true" id="65e176c4-725f-4f2f-bc6c-9497e3da87ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/api/smalltalk/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/smalltalk/schema.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ChatListItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ChatListItem/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ChatMessage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ChatMessage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContactListItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContactListItem/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/InputBox/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/InputBox/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql/mutations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/mutations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql/queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/queries.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphql/subscriptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/graphql/subscriptions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/ChatRoomScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ChatRoomScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/ChatScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ChatScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +66,7 @@
       <workItem from="1609092600605" duration="13084000" />
       <workItem from="1609251845059" duration="1380000" />
       <workItem from="1609483052597" duration="11660000" />
+      <workItem from="1609530856064" duration="2705000" />
     </task>
     <servers />
   </component>

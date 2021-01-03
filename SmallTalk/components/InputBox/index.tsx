@@ -55,6 +55,8 @@ import {API, Auth, graphqlOperation} from "aws-amplify";
                 onSendPress();
             }
         }
+
+
         return (
             <KeyboardAvoidingView
                 behavior={Platform.OS == "ios" ? "padding" : "height"}
@@ -63,7 +65,7 @@ import {API, Auth, graphqlOperation} from "aws-amplify";
             >
                 <View style={styles.container}>
                     <View style={styles.mainContainer}>
-                        <FontAwesome5 name="laugh-beam" size={24} color="grey"/>
+                       <FontAwesome5 name="laugh-beam" size={24} color="grey"/>
                         <TextInput
                             placeholder={"Type a message"}
                             style={styles.textInput}
