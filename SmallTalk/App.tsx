@@ -20,7 +20,7 @@ import LoginScreen from './screens/LoginScreen'
 import SignUpScreen from './screens/SignUpScreen';
 
 const randomImages=[
-    'https://lh3.googleusercontent.com/proxy/SOEku8lI7wxIoCc_LsxfYQQo8n91En6g6GLNVv4giQzEPoO1eUrL_WbPT5qwSAIowm8kr4ISrIhn1l5HDvMrLLK30ZBxMQc',
+    'https://i.pinimg.com/originals/63/29/5f/63295f0e6f0feb4ee71f3bf82a629530.jpg',
 ]
 
 const getRandomImage=()=>{
