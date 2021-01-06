@@ -14,6 +14,7 @@ import {API, Auth, graphqlOperation} from "aws-amplify";
 
 export default function ChatScreen() {
     const [chatRooms, setChatRooms] = useState([]);
+    
 
     useEffect(() => {
         const fetchChatRooms = async () => {

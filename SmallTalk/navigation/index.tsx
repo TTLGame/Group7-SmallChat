@@ -11,7 +11,7 @@ import {
   Fontisto,
   AntDesign,
   FontAwesome5,
-  MaterialIcons,
+  MaterialIcons, Ionicons,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 
@@ -27,6 +27,33 @@ import Colors from "../constants/Colors";
 import styles from "../components/ChatListItem/style";
 import LoginScreen from "../screens/LoginScreen";
 import SignUpScreen from "../screens/SignUpScreen"
+
+import {TouchableOpacity} from "react-native";
+import {Auth} from "aws-amplify";
+
+async function signOut() {
+    try {
+        await Auth.signOut();
+    } catch (error) {
+        console.log('error signing out: ', error);
+    }
+}
+
+async function changePass() {
+    try{
+        await Auth.changePassword(user, 'oldPassword', 'newPassword');
+    } catch(error){
+        console.log(error);
+    }
+}
+
+Auth.currentAuthenticatedUser()
+    .then(user => {
+        return Auth.changePassword(user, 'oldPassword', 'newPassword');
+    })
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({
@@ -82,8 +109,12 @@ function RootNavigator() {
                   marginRight: 10,
                 }}
               >
-                <Octicons name="search" size={21} color={"white"} />
-                <Fontisto name="nav-icon-a" size={21} color={"white"} />
+                  <TouchableOpacity onPress={changePass}>
+                      <Octicons name="search" size={21} color={"white"} />
+                  </TouchableOpacity>
+                <TouchableOpacity onPress={signOut}>
+                    <Ionicons name="exit" size={21} color={"white"} />
+                </TouchableOpacity>
               </View>
             ),
           }}
