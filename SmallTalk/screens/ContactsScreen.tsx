@@ -4,6 +4,7 @@ import ContractListItem from "../components/ContactListItem";
 //import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
+
 //import NewMessageButton from "../components/NewMessageButton";
 import {useEffect, useState} from "react";
 import {graphqlOperation,API} from "aws-amplify";

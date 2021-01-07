@@ -3,8 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="65e176c4-725f-4f2f-bc6c-9497e3da87ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ChatListItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ChatListItem/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContactListItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContactListItem/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/MainTabNavigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/MainTabNavigator.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/ChatRoomScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ChatRoomScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/ChatScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ChatScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/ContactsScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ContactsScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/SignUpScreen.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/TabTwoScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/UserScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lVUzkjAhhetUdEX5IYBQ4zRktG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -68,7 +80,9 @@
       <workItem from="1609748885123" duration="6918000" />
       <workItem from="1609821264892" duration="2752000" />
       <workItem from="1609847174496" duration="6942000" />
-      <workItem from="1609909512435" duration="1735000" />
+      <workItem from="1609909512435" duration="3827000" />
+      <workItem from="1609930638886" duration="5137000" />
+      <workItem from="1609966118593" duration="16635000" />
     </task>
     <servers />
   </component>

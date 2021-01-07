@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {FlatList, Text,ImageBackground} from "react-native";
-import {useRoute} from'@react-navigation/native'
+import {useNavigation, useRoute} from '@react-navigation/native'
 
 import ChatMessage from "../components/ChatMessage";
 import BG from "../assets/images/BG.png";
@@ -8,6 +8,7 @@ import InputBox from "../components/InputBox";
 import {messagesByChatRoom} from "../graphql/queries";
 import {API, graphqlOperation,Auth} from "aws-amplify";
 import {onCreateMessage} from"../graphql/subscriptions"
+import AddUserButton from "../components/AddUserButton";
 
 const ChatRoomScreen = () => {
     const [messages,setMessages]=useState([]);

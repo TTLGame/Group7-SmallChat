@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {View,Text,Image,TouchableWithoutFeedback} from "react-native";
 import {User} from "../../types";
 import styles from "./style";
@@ -18,6 +18,9 @@ const ContactListItem=(props: ContactListItemProps)=>{
     const { user } =props;
 
     const navigation=useNavigation();
+    const [ otherUser, setOtherUser] = useState(null);
+
+
 
     const onClick = async () => {
         try {
@@ -39,6 +42,7 @@ const ContactListItem=(props: ContactListItemProps)=>{
             }
 
             const newChatRoom = newChatRoomData.data.createChatRoom;
+
 
             // 2. Add `user` to the Chat Room
             await API.graphql(
@@ -65,9 +69,10 @@ const ContactListItem=(props: ContactListItemProps)=>{
                 )
             )
 
+
             navigation.navigate('ChatRoom', {
                 id: newChatRoom.id,
-                name: "Hardcoded name",
+                name: otherUser.name,
             })
 
         } catch (e) {

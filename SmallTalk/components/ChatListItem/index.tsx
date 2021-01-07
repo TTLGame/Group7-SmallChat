@@ -3,7 +3,7 @@ import {View,Text,Image,TouchableWithoutFeedback} from "react-native";
 import {ChatRoom} from "../../types";
 import styles from "./style";
 import moment from "moment";
-import {useNavigation} from'@react-navigation/native'
+import {useNavigation, useRoute} from '@react-navigation/native'
 import {Auth} from "aws-amplify";
 
 

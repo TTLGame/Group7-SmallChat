@@ -1,7 +1,7 @@
 import {
-  NavigationContainer,
-  DefaultTheme,
-  DarkTheme,
+    NavigationContainer,
+    DefaultTheme,
+    DarkTheme, useNavigation,
 } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
@@ -13,12 +13,13 @@ import {
   FontAwesome5,
   MaterialIcons, Ionicons,
   MaterialCommunityIcons,
+    Entypo,
 } from "@expo/vector-icons";
-
+import Modal from 'react-native-modal';
 import NotFoundScreen from "../screens/NotFoundScreen";
 import ChatRoomScreen from "../screens/ChatRoomScreen";
 import ContactsScreen from "../screens/ContactsScreen";
-
+import { RNCamera, FaceDetector } from 'react-native-camera';
 import { RootStackParamList } from "../types";
 import MainTabNavigator from "./MainTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
@@ -27,9 +28,11 @@ import Colors from "../constants/Colors";
 import styles from "../components/ChatListItem/style";
 import LoginScreen from "../screens/LoginScreen";
 import SignUpScreen from "../screens/SignUpScreen"
+import UserListScreen from "../screens/UserListScreen";
 
 import {TouchableOpacity} from "react-native";
 import {Auth} from "aws-amplify";
+import AddUserButton from "../components/AddUserButton";
 
 async function signOut() {
     try {
@@ -39,23 +42,20 @@ async function signOut() {
     }
 }
 
-async function changePass() {
-    try{
-        await Auth.changePassword(user, 'oldPassword', 'newPassword');
-    } catch(error){
-        console.log(error);
-    }
+
+function takePicture() {
+    const options = {};
+//options.location = ...
+    this.camera.capture({metadata: options})
+        .then((data) => console.log(data))
+        .catch(err => console.error(err));
 }
 
-Auth.currentAuthenticatedUser()
-    .then(user => {
-        return Auth.changePassword(user, 'oldPassword', 'newPassword');
-    })
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
+
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
+
 export default function Navigation({
   colorScheme,
 }: {
@@ -109,7 +109,7 @@ function RootNavigator() {
                   marginRight: 10,
                 }}
               >
-                  <TouchableOpacity onPress={changePass}>
+                  <TouchableOpacity onPress={takePicture}>
                       <Octicons name="search" size={21} color={"white"} />
                   </TouchableOpacity>
                 <TouchableOpacity onPress={signOut}>
@@ -135,17 +135,8 @@ function RootNavigator() {
                         <Image source={{uri:route.params.img}}  style={styles.avatarRoom}/>
                     ),*/
             headerRight: () => (
-              <View
-                style={{
-                  backgroundColor: "transparent",
-                  flexDirection: "row",
-                  width: 60,
-                  justifyContent: "space-between",
-                  marginRight: 15,
-                }}
-              >
-                <FontAwesome5 name="video" size={21} color={"white"} />
-                <MaterialIcons name="call" size={21} color={"white"} />
+              <View>
+                  <AddUserButton />
               </View>
             ),
           })}
@@ -156,6 +147,10 @@ function RootNavigator() {
           name="Contacts"
           component={ContactsScreen}
         />
+          <Stack.Screen
+              name="UserList"
+              component={UserListScreen}
+          />
 
       </Stack.Navigator>
    

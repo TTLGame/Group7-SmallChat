@@ -9,12 +9,51 @@ import NewMessageButton from "../components/NewMessageButton";
 import {useEffect, useState} from "react";
 import {getUser} from "./queries";
 import {API, Auth, graphqlOperation} from "aws-amplify";
+import {onCreateChatRoom, onCreateMessage} from "../graphql/subscriptions";
+import {messagesByChatRoom} from "../graphql/queries";
 
 
 
 export default function ChatScreen() {
     const [chatRooms, setChatRooms] = useState([]);
-    
+
+    const fetchChatRooms = async () => {
+        try {
+            const userInfo = await Auth.currentAuthenticatedUser();
+
+            const userData = await API.graphql(
+                graphqlOperation(
+                    getUser, {
+                        id: userInfo.attributes.sub,
+                    }
+                )
+            )
+            setChatRooms(userData.data.getUser.chatRoomUser.items)
+        }catch (e) {
+
+        }
+    }
+
+
+    useEffect(() => {
+        const subscription = API.graphql(
+            graphqlOperation(onCreateChatRoom)
+        ).subscribe({
+            next: (data) => {
+                const newChatRoom = data.value.data.onCreateChatRoom;
+                console.log(data);
+                //if (newChatRoom.user.id !== route.params.id) {
+                 //   console.log("Message is in another room!")
+                 //   return;
+                //}
+                fetchChatRooms();
+                // setMessages([newMessage, ...messages]);
+            }
+        });
+
+        return () => subscription.unsubscribe();
+    }, [])
+
 
     useEffect(() => {
         const fetchChatRooms = async () => {

@@ -5,7 +5,7 @@ import * as React from 'react';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ChatScreen from '../screens/ChatScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
+import UserScreen from '../screens/UserScreen';
 import { MainTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 
 const MainTab = createMaterialTopTabNavigator<MainTabParamList>();
@@ -46,14 +46,6 @@ export default function MainTabNavigator() {
             tabBarLabel: () => null
         }}
       />
-        <MainTab.Screen
-            name="Account"
-            component={TabTwoNavigator}
-            options={{
-                tabBarIcon: ({ color }) => <MaterialCommunityIcons name="account" color={color} size={24}/>,
-                tabBarLabel: () => null
-            }}
-        />
     </MainTab.Navigator>
   );
 }
@@ -87,7 +79,7 @@ function TabTwoNavigator() {
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
         name="TabTwoScreen"
-        component={TabTwoScreen}
+        component={UserScreen}
         options={{ headerTitle: 'Tab Two Title' }}
       />
     </TabTwoStack.Navigator>
